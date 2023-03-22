@@ -1,6 +1,6 @@
 {
   "name": "rainbow-terminal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "🌈 Beautiful rainbow terminal",
   "main": "src/rainbow.js",
   "types": "types/rainbow.d.ts",
