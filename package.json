@@ -1,0 +1,56 @@
+{
+  "name": "rainbow-terminal",
+  "version": "0.0.2",
+  "description": "🌈 Beautiful rainbow terminal",
+  "main": "src/rainbow.js",
+  "scripts": {
+    "test": "vitest",
+    "cli": "node src/cli.js \"Hello world!\" red green blue && node src/cli.js \"Hello world!\" red green blue bg",
+    "lint": "eslint src && prettier --check src",
+    "lint:fix": "eslint --fix src && prettier --check --write src"
+  },
+  "bin": {
+    "rainbow": "src/cli.js"
+  },
+  "files": [
+    "src"
+  ],
+  "author": "Lete114",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CreateWheel/rainbow-terminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CreateWheel/rainbow-terminal/issues"
+  },
+  "homepage": "https://github.com/CreateWheel/rainbow-terminal#readme",
+  "keywords": [
+    "cli",
+    "color",
+    "colors",
+    "colour",
+    "rainbow",
+    "command-line",
+    "console",
+    "formatting",
+    "gradient",
+    "gradients",
+    "log",
+    "logging",
+    "shell",
+    "string",
+    "style",
+    "styles",
+    "terminal"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4",
+    "vitest": "^0.29.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "tinygradient": "^1.1.5"
+  }
+}
