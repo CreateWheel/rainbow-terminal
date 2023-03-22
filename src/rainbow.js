@@ -1,10 +1,10 @@
+/*eslint max-len: ["error", { "ignoreComments": true }]*/
 const chalk = require('chalk')
 const tinygradient = require('tinygradient')
 
 /**
  *
- * @param { string } string String to be colored
- * @param  { ...string } args The color parameter, or the gradient color if it is multiple color parameters
+ * @param { tinycolor.ColorInput[] } args The color parameter, or the gradient color if it is multiple color parameters
  * will be generated. If you need a gradient background, you can fill in the last parameter options { bg: true }
  * ```
  * const rainbow = require('rainbow-terminal')
@@ -17,21 +17,21 @@ const tinygradient = require('tinygradient')
  * // rainbow background
  * console.log(rainbow(RGB)('Hello world!', { bg: true }))
  * ```
- * @returns
+ * @returns { (string: string, options?: { bg: boolean }) => string }
  */
 function initRainbow(...args) {
   if (args.length < 1) throw new Error('Lack of color')
   if (args.length === 1 && Array.isArray(args[0])) args = args[0]
   if (args.length === 1) args.push(args[0])
 
-  const grad = tinygradient.apply(this, args)
+  const grad = tinygradient(args)
   return (string, options) => rainbow(string.toString(), grad, options || {})
 }
 
 /**
  * @param { string } string
  * @param { tinygradient.Instance } grad
- * @param { {bg:boolean} } options
+ * @param { { bg: boolean } } options
  */
 function rainbow(string, grad, options) {
   const strings = []
