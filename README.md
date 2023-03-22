@@ -36,6 +36,7 @@ rainbow "Hello world!" red green blue bg
 
 > The usage is almost identical to [gradient-string](https://github.com/bokub/gradient-string), with the following differences
 
+- `rainbow-terminal` has no built-in gradient color
 - `gradient-string` single-line string will clear all spaces in the string
 - `gradient-string` does not support background colors
 - `gradient-string` does not support solid colors, only gradients
