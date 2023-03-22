@@ -17,7 +17,7 @@ const tinygradient = require('tinygradient')
  * // rainbow background
  * console.log(rainbow(RGB)('Hello world!', { bg: true }))
  * ```
- * @returns { (string: string, options?: { bg: boolean }) => string }
+ * @returns { (string: string, options?: { bg?: boolean }) => string }
  */
 function initRainbow(...args) {
   if (args.length < 1) throw new Error('Lack of color')
